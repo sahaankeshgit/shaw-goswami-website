@@ -22,12 +22,12 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-heading">Services</h4>
             <ul className="footer-links">
-              <li><Link href="/solutions">Strategy & Consulting</Link></li>
-              <li><Link href="/solutions">Business Transformation</Link></li>
-              <li><Link href="/solutions">AI Strategy & Roadmap</Link></li>
-              <li><Link href="/solutions">Data & Digital Engineering</Link></li>
-              <li><Link href="/solutions">AI Implementation</Link></li>
-              <li><Link href="/solutions">Governance & Compliance</Link></li>
+              <li><Link href="/#solutions">Strategy & Consulting</Link></li>
+              <li><Link href="/#solutions">Business Transformation</Link></li>
+              <li><Link href="/#solutions">AI Strategy & Roadmap</Link></li>
+              <li><Link href="/#solutions">Data & Digital Engineering</Link></li>
+              <li><Link href="/#solutions">AI Implementation</Link></li>
+              <li><Link href="/#solutions">Governance & Compliance</Link></li>
             </ul>
           </div>
 
@@ -35,33 +35,18 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-heading">Navigation</h4>
             <ul className="footer-links">
-              <li><Link href="/solutions">Product & Services</Link></li>
-              <li><Link href="/industries">Industries</Link></li>
-              <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/insights">Insights</Link></li>
-              <li><Link href="/clients">Clients & Impact</Link></li>
-              <li><Link href="/faqs">Smart FAQs</Link></li>
+              <li><Link href="/#solutions">Product & Services</Link></li>
+              <li><Link href="/#industries">Industries</Link></li>
+              <li><Link href="/#about">About Us</Link></li>
+              <li><Link href="/#clients">Clients & Impact</Link></li>
+              <li><Link href="/#faqs">Smart FAQs</Link></li>
             </ul>
           </div>
 
           {/* Col 4: Contact & Consultation */}
           <div className="footer-col contact-col">
             <h4 className="footer-heading">Connect With Us</h4>
-            <ul className="footer-contact-info">
-              <li>
-                <MapPin size={16} />
-                <span>Global Practice across UK, India, East Asia & Africa</span>
-              </li>
-              <li>
-                <Mail size={16} />
-                <a href="mailto:contact@shawandgoswami.in">contact@shawandgoswami.in</a>
-              </li>
-              <li>
-                <Globe size={16} />
-                <span>www.shawandgoswami.in</span>
-              </li>
-            </ul>
-            <div className="footer-cta-box">
+            <div className="footer-cta-box" style={{ marginTop: "1rem" }}>
               <Link href="/contact" className="footer-cta-btn">
                 BOOK A STRATEGY CALL <ArrowRight size={14} />
               </Link>

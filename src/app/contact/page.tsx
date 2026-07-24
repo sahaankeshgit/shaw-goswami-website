@@ -54,41 +54,7 @@ export default function ContactPage() {
                 Schedule a call directly or submit your details to have an industry consulting partner contact you.
               </p>
 
-              <ul className="contact-details-list">
-                <li>
-                  <a href="mailto:info@shawandgoswami.in" className="contact-detail-item">
-                    <div className="contact-detail-icon">
-                      <Mail size={18} />
-                    </div>
-                    <div>
-                      <div className="contact-detail-label">Email Support</div>
-                      <div className="contact-detail-value">info@shawandgoswami.in</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+919830098059" className="contact-detail-item">
-                    <div className="contact-detail-icon">
-                      <Phone size={18} />
-                    </div>
-                    <div>
-                      <div className="contact-detail-label">Phone Inquiry</div>
-                      <div className="contact-detail-value">+91 98300 98059</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <div className="contact-detail-item">
-                    <div className="contact-detail-icon">
-                      <MapPin size={18} />
-                    </div>
-                    <div>
-                      <div className="contact-detail-label">Headquarters Office</div>
-                      <div className="contact-detail-value">Kolkata, India</div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+
 
               {/* Calendly Integration Block */}
               <div className="calendly-mock-card">

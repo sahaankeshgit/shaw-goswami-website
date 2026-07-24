@@ -79,19 +79,6 @@ export const clientsData: ClientOrg[] = [
       topPercent: 27,
       leftPercent: 76.5
     }
-  },
-  {
-    id: "uk-enterprise",
-    name: "UK Strategic Partner",
-    location: "London",
-    country: "United Kingdom",
-    industry: "Management & Tech Advisory",
-    logoText: "UK PARTNER",
-    description: "Strategic consulting and enterprise AI initiatives in Western Europe.",
-    mapPin: {
-      topPercent: 25.5,
-      leftPercent: 46.5
-    }
   }
 ];
 

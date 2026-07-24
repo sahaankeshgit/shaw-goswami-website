@@ -25,20 +25,69 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [activeSection, setActiveSection] = useState<string>("");
+
   // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
 
-  // Order with ABOUT US at first position
+  // ScrollSpy to highlight active section on the homepage
+  useEffect(() => {
+    if (pathname !== "/") {
+      setActiveSection("");
+      return;
+    }
+
+    const sections = ["hero", "about", "solutions", "industries", "clients", "faqs", "contact"];
+    const observerOptions = {
+      root: null,
+      rootMargin: "-25% 0px -55% 0px", // Trigger when section is in viewport focus
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      sections.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) observer.unobserve(el);
+      });
+    };
+  }, [pathname]);
+
+  // Navigation Items
   const reorderedNavItems = [
-    { label: "ABOUT US", href: "/about" },
-    { label: "PRODUCT AND SERVICES", href: "/solutions" },
-    { label: "INDUSTRIES", href: "/industries" },
-    { label: "INSIGHTS", href: "/insights" },
-    { label: "CLIENTS", href: "/clients" },
-    { label: "FAQS", href: "/faqs" }
+    { label: "ABOUT US", href: "/#about" },
+    { label: "PRODUCT AND SERVICES", href: "/#solutions" },
+    { label: "INDUSTRIES", href: "/#industries" },
+    { label: "CLIENTS", href: "/#clients" },
+    { label: "FAQS", href: "/#faqs" }
   ];
+
+  const isLinkActive = (href: string) => {
+    if (href.startsWith("/#")) {
+      const targetHash = href.replace("/#", "");
+      if (pathname === "/") {
+        return activeSection === targetHash;
+      }
+      return false;
+    }
+    return pathname === href || (href !== "/" && pathname.startsWith(href));
+  };
 
   return (
     <>
@@ -54,7 +103,7 @@ export default function Header() {
                 <li key={item.href}>
                   <Link 
                     href={item.href} 
-                    className={`nav-link ${pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href)) ? "active" : ""}`}
+                    className={`nav-link ${isLinkActive(item.href) ? "active" : ""}`}
                   >
                     {item.label}
                   </Link>
@@ -91,7 +140,7 @@ export default function Header() {
                 <li key={item.href}>
                   <Link 
                     href={item.href} 
-                    className={`mobile-nav-item ${pathname === item.href ? "active" : ""}`}
+                    className={`mobile-nav-item ${isLinkActive(item.href) ? "active" : ""}`}
                   >
                     {item.label}
                   </Link>
@@ -106,6 +155,7 @@ export default function Header() {
           </nav>
         </div>
       )}
+
 
       <style jsx>{`
         .site-header {

@@ -79,24 +79,6 @@ export interface ProductAccelerator {
 export const consultingServices: ConsultingService[] = [
   {
     number: 1,
-    id: "strategy-management-consulting",
-    title: "Strategy & Management Consulting",
-    description: "Helping leadership teams make better strategic decisions.",
-    iconName: "Compass",
-    capabilitiesLeft: ["Business Strategy", "Growth Strategy", "Corporate Strategy", "Market Entry Strategy", "Business Model Innovation"],
-    capabilitiesRight: ["Digital Strategy", "Organizational Transformation", "Operating Model Design", "Performance Improvement", "Executive Advisory"]
-  },
-  {
-    number: 2,
-    id: "business-transformation",
-    title: "Business Transformation",
-    description: "Redesign operations for efficiency, scalability and growth.",
-    iconName: "Settings",
-    capabilitiesLeft: ["Process Re-engineering", "Operational Excellence", "Cost Optimization"],
-    capabilitiesRight: ["Supply Chain Optimization", "Customer Experience Transformation", "Change Management"]
-  },
-  {
-    number: 3,
     id: "ai-strategy-transformation",
     title: "AI Strategy & Transformation",
     description: "Identify where AI creates measurable business value.",
@@ -105,7 +87,7 @@ export const consultingServices: ConsultingService[] = [
     capabilitiesRight: ["AI Business Case", "ROI Assessment", "AI Adoption Strategy"]
   },
   {
-    number: 4,
+    number: 2,
     id: "data-digital-engineering",
     title: "Data & Digital Engineering",
     description: "Build the technology foundation for intelligent enterprises.",
@@ -114,13 +96,31 @@ export const consultingServices: ConsultingService[] = [
     capabilitiesRight: ["Digital Platforms", "Cloud Modernization", "Enterprise Integration"]
   },
   {
-    number: 5,
+    number: 3,
     id: "ai-implementation",
     title: "AI Implementation",
     description: "Turn strategy into production-ready solutions.",
     iconName: "Code",
     capabilitiesLeft: ["AI Product Development", "Enterprise AI Integration", "AI Agents"],
     capabilitiesRight: ["Intelligent Automation", "Decision Intelligence", "GenAI Solutions"]
+  },
+  {
+    number: 4,
+    id: "strategy-management-consulting",
+    title: "Strategy & Management Consulting",
+    description: "Helping leadership teams make better strategic decisions.",
+    iconName: "Compass",
+    capabilitiesLeft: ["Business Strategy", "Growth Strategy", "Corporate Strategy", "Market Entry Strategy", "Business Model Innovation"],
+    capabilitiesRight: ["Digital Strategy", "Organizational Transformation", "Operating Model Design", "Performance Improvement", "Executive Advisory"]
+  },
+  {
+    number: 5,
+    id: "business-transformation",
+    title: "Business Transformation",
+    description: "Redesign operations for efficiency, scalability and growth.",
+    iconName: "Settings",
+    capabilitiesLeft: ["Process Re-engineering", "Operational Excellence", "Cost Optimization"],
+    capabilitiesRight: ["Supply Chain Optimization", "Customer Experience Transformation", "Change Management"]
   },
   {
     number: 6,

@@ -7,6 +7,7 @@
   --color-navy-dark: #0B132B;
   --color-navy-deep: #060B18;
   --color-navy-subtle: #1C2541;
+  --color-blue: #053a6e;
   --color-cream-bg: #FDF9F6;
   --color-white: #FFFFFF;
   --color-text-dark: #0B132B;
@@ -104,27 +105,38 @@ textarea.form-control:focus {
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-primary);
-  font-weight: 700;
-  line-height: 1.25;
-  color: var(--color-navy);
-  text-wrap: balance;
+h1, h2, h3, h4, h5, h6,
+.section-title-serif,
+.section-sub-heading,
+.section-sub-title,
+.hero-title,
+.story-title,
+.section-main-heading,
+.ind-title-heading,
+.card-heading,
+.prod-title,
+.pillar-title,
+.why-card-title,
+.cat-title,
+.engage-step-title {
+  font-family: var(--font-cinzel), 'Cinzel', Georgia, serif !important;
+  font-weight: 400 !important;
+  line-height: 1.25 !important;
+  text-wrap: balance !important;
+  text-transform: none !important;
+  letter-spacing: 0.05em !important;
 }
 
 h1 {
-  font-size: var(--font-size-h1);
-  letter-spacing: -0.02em;
+  font-size: var(--font-size-h1) !important;
 }
 
 h2 {
-  font-size: var(--font-size-h2);
-  letter-spacing: -0.01em;
+  font-size: var(--font-size-h2) !important;
 }
 
 h3 {
-  font-size: var(--font-size-h3);
-  font-weight: 600;
+  font-size: var(--font-size-h3) !important;
 }
 
 p {
@@ -2433,3 +2445,167 @@ textarea.form-control {
     align-items: center;
   }
 }
+
+/* Smooth scrolling configurations scoped to Homepage */
+html.home-snap-active {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+.home-page-wrapper .snap-section {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+
+/* Wherever the background is pinkish, use the font colour #053a6e */
+.hero-section,
+.about-hero,
+.solutions-hero,
+.industries-hero,
+.clients-hero,
+.faqs-hero,
+.story-metrics-inner,
+.story-metrics-section,
+.site-header,
+.product-card,
+.industries-serve-inner,
+.how-we-engage-inner,
+.cross-approach-inner,
+.gap-inner-section,
+.solutions-section,
+.calendly-mock-card,
+.form-card {
+  --color-navy-dark: #053a6e;
+  --color-text-dark: #053a6e;
+  --color-text-muted: #053a6e;
+  color: #053a6e !important;
+}
+
+/* Headings inside pinkish background containers */
+.hero-section h1,
+.hero-section h2,
+.hero-section h3,
+.hero-section h4,
+.story-metrics-inner h1,
+.story-metrics-inner h2,
+.story-metrics-inner h3,
+.story-metrics-section h1,
+.story-metrics-section h2,
+.story-metrics-section h3,
+.about-hero h1,
+.about-hero h2,
+.about-hero h3,
+.solutions-hero h2,
+.industries-hero h2,
+.clients-hero h2,
+.faqs-hero h2,
+.product-card h1,
+.product-card h2,
+.product-card h3,
+.product-card h4,
+.industries-serve-inner h1,
+.industries-serve-inner h2,
+.industries-serve-inner h3,
+.how-we-engage-inner h1,
+.how-we-engage-inner h2,
+.how-we-engage-inner h3,
+.cross-approach-inner h1,
+.cross-approach-inner h2,
+.cross-approach-inner h3,
+.gap-inner-section h1,
+.gap-inner-section h2,
+.gap-inner-section h3,
+.calendly-mock-card h1,
+.calendly-mock-card h2,
+.calendly-mock-card h3,
+.calendly-mock-card h4,
+.form-card h1,
+.form-card h2,
+.form-card h3,
+.form-card h4 {
+  color: #053a6e !important;
+}
+
+/* Paragraphs, links, lists, pills inside pinkish background containers */
+.hero-section p,
+.hero-section span,
+.hero-section svg,
+.story-metrics-inner p,
+.story-metrics-inner span,
+.story-metrics-inner svg,
+.story-metrics-section p,
+.story-metrics-section span,
+.story-metrics-section svg,
+.about-hero p,
+.about-hero span,
+.solutions-hero p,
+.solutions-hero span,
+.industries-hero p,
+.industries-hero span,
+.clients-hero p,
+.clients-hero span,
+.faqs-hero p,
+.faqs-hero span,
+.product-card p,
+.product-card span,
+.product-card svg,
+.industries-serve-inner p,
+.industries-serve-inner span,
+.industries-serve-inner svg,
+.how-we-engage-inner p,
+.how-we-engage-inner span,
+.how-we-engage-inner svg,
+.cross-approach-inner p,
+.cross-approach-inner span,
+.cross-approach-inner svg,
+.gap-inner-section p,
+.gap-inner-section span,
+.gap-inner-section svg,
+.calendly-mock-card p,
+.calendly-mock-card span,
+.calendly-mock-card svg,
+.form-card p,
+.form-card span,
+.form-card svg,
+.form-card label {
+  color: #053a6e !important;
+}
+
+/* Header elements sitting on pinkish background */
+.site-header .nav-link,
+.site-header .mobile-nav-item,
+.site-header svg {
+  color: #053a6e !important;
+}
+
+.site-header .nav-link.active::after {
+  background-color: #053a6e !important;
+}
+
+/* Outline button color adjustment in pinkish containers */
+.hero-section .btn-outline-navy,
+.about-hero .btn-outline-navy {
+  color: #053a6e !important;
+  border-color: #053a6e !important;
+}
+
+.hero-section .btn-outline-navy:hover,
+.about-hero .btn-outline-navy:hover {
+  background-color: rgba(5, 58, 110, 0.08) !important;
+}
+
+/* Feature pills border and bg adjustments in pinkish containers */
+.hero-pills-bar,
+.hero-badges-row .badge-pill,
+.stats-row-grid .stat-card,
+.trust-badge-card {
+  border-color: rgba(5, 58, 110, 0.2) !important;
+  background: rgba(255, 255, 255, 0.35) !important;
+}
+
