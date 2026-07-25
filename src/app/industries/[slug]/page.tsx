@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { 
   ArrowLeft, 
   Activity, 
@@ -33,6 +33,11 @@ interface IndustryPageProps {
 
 export default async function IndustrySubPage({ params }: IndustryPageProps) {
   const { slug } = await params;
+  
+  if (slug === "and-many-more") {
+    redirect("/contact");
+  }
+
   const industry = await getIndustryBySlug(slug);
 
   if (!industry) {

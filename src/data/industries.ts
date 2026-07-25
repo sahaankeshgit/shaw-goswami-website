@@ -240,25 +240,15 @@ export const industries: Industry[] = [
     outcomes: ["Higher On-Time Performance", "Lower Fuel Consumption", "Reduced Maintenance Costs"]
   },
   {
-    slug: "semiconductor",
-    title: "Semiconductor",
-    summary: "Optimizing design, manufacturing, yield, and supply chains with AI-driven intelligence.",
-    iconName: "Cpu",
-    challenges: [
-      "Complex fabrication yield optimization in nanometer processes.",
-      "Supply chain disruptions for specialized silicon substrates.",
-      "High cost of wafer defect inspection and testing cycles."
-    ],
-    opportunities: [
-      "Fab Yield Optimization: Multivariable ML analysis of wafer testing data.",
-      "Visual Defect Inspection: Deep learning computer vision on silicon dies.",
-      "Substrate Supply Chain Tower: Global visibility for critical raw materials."
-    ],
-    roadmap: [
-      { phase: "Phase 1", title: "Yield Data Integration", duration: "2 Months", description: "Connect fab tester logs to high-performance AI cluster." }
-    ],
-    solutions: ["ai-implementation", "data-digital-engineering"],
+    slug: "and-many-more",
+    title: "And Many More",
+    summary: "",
+    iconName: "Sparkles",
+    challenges: [],
+    opportunities: [],
+    roadmap: [],
+    solutions: [],
     caseStudies: [],
-    outcomes: ["Increased Wafer Yield", "Early Defect Detection", "Resilient Silicon Supply Chain"]
+    outcomes: []
   }
 ];

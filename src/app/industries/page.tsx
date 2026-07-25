@@ -22,7 +22,8 @@ import {
   TrendingUp,
   ShieldCheck,
   CheckCircle2,
-  Users
+  Users,
+  Sparkles
 } from "lucide-react";
 import { industries } from "../../data/industries";
 
@@ -36,7 +37,8 @@ export default function IndustriesPage() {
     BedDouble: <BedDouble size={28} />,
     Rocket: <Rocket size={28} />,
     Plane: <Plane size={28} />,
-    Cpu: <Cpu size={28} />
+    Cpu: <Cpu size={28} />,
+    Sparkles: <Sparkles size={28} />
   };
 
   const approachSteps = [
@@ -125,21 +127,43 @@ export default function IndustriesPage() {
           </div>
 
           <div className="industries-9-grid">
-            {industries.map((ind) => (
-              <div id={ind.slug} key={ind.slug} className="ind-big-card">
-                <div className="ind-card-top">
-                  <div className="ind-icon-circle">
-                    {iconMap[ind.iconName] || <Building2 size={24} />}
+            {industries.map((ind) => {
+              if (ind.slug === "and-many-more") {
+                return (
+                  <a 
+                    href="/contact" 
+                    key={ind.slug}
+                    className="ind-big-card ind-more-cta-card"
+                  >
+                    <div className="ind-more-cta-content">
+                      <div className="ind-more-cta-icon-circle">
+                        <Sparkles size={28} />
+                      </div>
+                      <h3 className="ind-more-cta-heading">And Many More</h3>
+                      <p className="ind-more-cta-text">Partner with us to architect custom AI and data solutions tailored to your sector.</p>
+                      <div className="ind-more-cta-link-label">
+                        Inquire About Your Industry <ArrowRight size={14} />
+                      </div>
+                    </div>
+                  </a>
+                );
+              }
+              return (
+                <div id={ind.slug} key={ind.slug} className="ind-big-card">
+                  <div className="ind-card-top">
+                    <div className="ind-icon-circle">
+                      {iconMap[ind.iconName] || <Building2 size={24} />}
+                    </div>
+                    <h3 className="ind-title-heading">{ind.title}</h3>
                   </div>
-                  <h3 className="ind-title-heading">{ind.title}</h3>
+                  {ind.summary && <p className="ind-summary-text">{ind.summary}</p>}
+                  
+                  <Link href={`/industries/${ind.slug}`} className="ind-explore-link">
+                    Explore Solutions <ArrowRight size={14} />
+                  </Link>
                 </div>
-                <p className="ind-summary-text">{ind.summary}</p>
-                
-                <Link href={`/industries/${ind.slug}`} className="ind-explore-link">
-                  Explore Solutions <ArrowRight size={14} />
-                </Link>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -344,6 +368,80 @@ export default function IndustriesPage() {
           display: flex;
           flex-direction: column;
           box-shadow: var(--color-card-shadow);
+          transition: all 0.25s ease;
+        }
+
+        .ind-big-card:hover {
+          transform: translateY(-3px);
+          box-shadow: var(--color-card-shadow-hover);
+        }
+
+        .ind-more-cta-card {
+          background-color: var(--color-white) !important;
+          border: 1px solid var(--color-border-subtle) !important;
+          color: var(--color-navy-dark) !important;
+          cursor: pointer;
+          text-decoration: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .ind-more-cta-card:hover {
+          transform: translateY(-3px);
+          box-shadow: var(--color-card-shadow-hover) !important;
+          border-color: var(--color-coral-border) !important;
+        }
+
+        .ind-more-cta-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          height: 100%;
+          justify-content: space-between;
+          gap: 1.25rem;
+        }
+
+        .ind-more-cta-icon-circle {
+          width: 52px;
+          height: 52px;
+          border-radius: 50%;
+          background-color: var(--color-coral-light);
+          color: var(--color-navy-dark);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .ind-more-cta-heading {
+          font-family: var(--font-primary);
+          font-size: 1.35rem;
+          color: var(--color-navy-dark);
+          margin: 0;
+        }
+
+        .ind-more-cta-text {
+          font-size: 0.875rem;
+          color: var(--color-text-muted);
+          line-height: 1.5;
+          margin: 0;
+          flex-grow: 1;
+        }
+
+        .ind-more-cta-link-label {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-size: 0.875rem;
+          font-weight: 700;
+          color: var(--color-coral-border);
+          margin-top: 0.5rem;
+          transition: gap 0.2s ease;
+        }
+
+        .ind-more-cta-card:hover .ind-more-cta-link-label {
+          gap: 0.6rem;
         }
 
         .ind-card-top {
