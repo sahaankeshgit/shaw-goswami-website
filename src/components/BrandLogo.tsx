@@ -20,7 +20,22 @@ export default function BrandLogo({
     : "/images/logo_master_horizontal.png";
 
   return (
-    <Link href="/" className={`brand-logo-container layout-${layout} ${className}`} aria-label="Shaw & Goswami Consulting Home">
+    <Link 
+      href="/" 
+      onClick={(e) => {
+        if (typeof window !== "undefined" && window.location.pathname === "/") {
+          e.preventDefault();
+          const hero = document.getElementById("hero");
+          if (hero) {
+            hero.scrollIntoView({ behavior: "smooth" });
+          } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+        }
+      }}
+      className={`brand-logo-container layout-${layout} ${className}`} 
+      aria-label="Shaw & Goswami Consulting Home"
+    >
       {layout === "horizontal" ? (
         /* eslint-disable-next-line @next/next/no-img-element */
         <img 

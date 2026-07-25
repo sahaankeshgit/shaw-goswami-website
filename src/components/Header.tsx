@@ -212,22 +212,8 @@ export default function Header() {
           padding: 0.4rem 0;
           position: relative;
           white-space: nowrap;
-          transition: opacity 0.2s ease;
-        }
-
-        .nav-link:hover {
-          opacity: 0.75;
-        }
-
-        .nav-link.active::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 2.5px;
-          background-color: var(--color-navy-dark);
-          border-radius: 2px;
+          transition: color 0.25s ease;
+          display: inline-block;
         }
 
         .header-cta-block {

@@ -161,7 +161,7 @@ export default function AboutSection() {
           font-size: 0.8125rem;
           font-weight: 700;
           letter-spacing: 0.12em;
-          color: var(--color-coral-hero);
+          color: var(--color-coral-dark);
           display: block;
           margin-bottom: 0.5rem;
         }

@@ -5,6 +5,7 @@ export interface ClientOrg {
   country: string;
   industry: string;
   logoText: string;
+  logoUrl?: string;
   tagline?: string;
   description: string;
   mapPin: {
@@ -21,6 +22,7 @@ export const clientsData: ClientOrg[] = [
     country: "Mongolia",
     industry: "FMCG Distribution",
     logoText: "NANO",
+    logoUrl: "/images/nano.jpeg",
     tagline: "All About Quality",
     description: "Leading consumer goods and FMCG distribution enterprise across East Asia.",
     mapPin: {
@@ -35,6 +37,7 @@ export const clientsData: ClientOrg[] = [
     country: "India",
     industry: "Oil & Gas",
     logoText: "PETRONET",
+    logoUrl: "/images/petronet.png",
     description: "Major energy distribution pipeline & infrastructure company optimizing predictive maintenance.",
     mapPin: {
       topPercent: 44,
@@ -48,6 +51,7 @@ export const clientsData: ClientOrg[] = [
     country: "South Africa",
     industry: "Healthcare Research",
     logoText: "EZINTSHA",
+    logoUrl: "/images/Ezintsha.png",
     description: "Premier academic medical research organization advancing public healthcare & trial analytics.",
     mapPin: {
       topPercent: 75,
@@ -61,6 +65,7 @@ export const clientsData: ClientOrg[] = [
     country: "Mongolia",
     industry: "Equine Services",
     logoText: "MORITON",
+    logoUrl: "/images/moriton.png",
     description: "Specialized equine health & performance facility leveraging data analytics.",
     mapPin: {
       topPercent: 31,
@@ -74,6 +79,7 @@ export const clientsData: ClientOrg[] = [
     country: "Mongolia",
     industry: "Diversified Business",
     logoText: "ZEBRA",
+    logoUrl: "/images/zebra.webp",
     description: "Multi-sector commercial enterprise modernizing operations and supply chain management.",
     mapPin: {
       topPercent: 27,

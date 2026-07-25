@@ -199,7 +199,7 @@ export default function SolutionsSection() {
           font-size: 0.8125rem;
           font-weight: 700;
           letter-spacing: 0.12em;
-          color: var(--color-coral-border);
+          color: var(--color-coral-dark);
           display: block;
           margin-bottom: 0.75rem;
         }
@@ -452,6 +452,10 @@ export default function SolutionsSection() {
           justify-content: center;
           margin: 0 auto 1.25rem auto;
           position: relative;
+        }
+
+        .engage-node-circle :global(svg) {
+          color: var(--color-white) !important;
         }
 
         .step-badge-num {

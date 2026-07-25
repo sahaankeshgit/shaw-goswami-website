@@ -98,6 +98,10 @@ export default function HomePage() {
           margin: 0;
         }
 
+        .cta-right-btn {
+          flex-shrink: 0;
+        }
+
         .btn-cta-coral {
           display: inline-flex;
           align-items: center;

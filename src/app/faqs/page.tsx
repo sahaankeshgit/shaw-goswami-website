@@ -106,7 +106,6 @@ export default function FAQsPage() {
         <div className="container-custom">
           <div className="text-center" style={{ marginBottom: "3.5rem" }}>
             <h2 className="section-title-serif">FAQs</h2>
-            <p className="section-subtitle-text">Explore questions by topic to find what you need.</p>
           </div>
 
           <div className="faqs-categories-grid">

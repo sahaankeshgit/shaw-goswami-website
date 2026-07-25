@@ -31,13 +31,13 @@ export default function ContactSection() {
   return (
     <section id="contact" className="contact-section snap-section">
       <div className="container-custom">
-        <div className="text-center" style={{ marginBottom: "3.5rem" }}>
+        <div className="text-left-block" style={{ marginBottom: "3.5rem" }}>
           <span className="section-tag">CONSULTATION</span>
           <h2 className="section-title-serif">Let's Start a Conversation</h2>
           <p className="section-subtitle-text">
             Schedule a strategy call or submit a consultation request directly below.
           </p>
-          <div className="title-underline-center" />
+          <div className="title-underline-left" />
         </div>
 
         <div className="contact-grid">
@@ -218,7 +218,7 @@ export default function ContactSection() {
           font-size: 0.8125rem;
           font-weight: 700;
           letter-spacing: 0.12em;
-          color: var(--color-coral-border);
+          color: var(--color-coral-dark);
           display: block;
           margin-bottom: 0.75rem;
           text-transform: uppercase;
@@ -231,18 +231,22 @@ export default function ContactSection() {
           margin-bottom: 1.25rem;
         }
 
+        .text-left-block {
+          text-align: left;
+        }
+
         .section-subtitle-text {
           font-size: 1.05rem;
           color: var(--color-text-muted);
           max-width: 600px;
-          margin: 0 auto 1.5rem auto;
+          margin: 0 0 1.5rem 0;
         }
 
-        .title-underline-center {
+        .title-underline-left {
           width: 50px;
           height: 3px;
           background-color: var(--color-coral-border);
-          margin: 0 auto;
+          margin: 0;
         }
 
         .contact-grid {
@@ -278,7 +282,7 @@ export default function ContactSection() {
           align-items: center;
           justify-content: center;
           width: 100%;
-          background-color: #053a6e;
+          background-color: #0B1B3D;
           color: var(--color-white);
           font-family: var(--font-secondary);
           font-size: 0.875rem;
@@ -291,7 +295,7 @@ export default function ContactSection() {
         }
 
         .btn-calendly-scheduler:hover {
-          background-color: #042e58;
+          background-color: #060B18;
           transform: translateY(-1px);
         }
 
@@ -341,7 +345,7 @@ export default function ContactSection() {
 
         .btn-submit-consultation {
           width: 100%;
-          background-color: #053a6e;
+          background-color: #0B1B3D;
           color: var(--color-white);
           font-family: var(--font-secondary);
           font-size: 0.9rem;
@@ -355,7 +359,7 @@ export default function ContactSection() {
         }
 
         .btn-submit-consultation:hover {
-          background-color: #042e58;
+          background-color: #060B18;
           transform: translateY(-1px);
         }
 

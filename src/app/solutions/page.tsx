@@ -490,6 +490,10 @@ export default function SolutionsPage() {
           position: relative;
         }
 
+        .engage-node-circle :global(svg) {
+          color: var(--color-white) !important;
+        }
+
         .step-badge-num {
           position: absolute;
           top: -4px;

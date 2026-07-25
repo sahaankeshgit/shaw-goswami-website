@@ -47,7 +47,7 @@ export default function Footer() {
           <div className="footer-col contact-col">
             <h4 className="footer-heading">Connect With Us</h4>
             <div className="footer-cta-box" style={{ marginTop: "1rem" }}>
-              <Link href="/contact" className="footer-cta-btn">
+              <Link href="/contact" className="btn-cta-coral">
                 BOOK A STRATEGY CALL <ArrowRight size={14} />
               </Link>
             </div>
@@ -178,25 +178,7 @@ export default function Footer() {
           color: var(--color-coral-hero);
         }
 
-        .footer-cta-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.5rem;
-          background-color: var(--color-coral-hero);
-          color: var(--color-navy-dark);
-          font-size: 0.8125rem;
-          font-weight: 700;
-          letter-spacing: 0.05em;
-          padding: 0.65rem 1.2rem;
-          border-radius: var(--border-radius-sm);
-          text-decoration: none;
-          transition: all 0.2s ease;
-        }
 
-        .footer-cta-btn:hover {
-          background-color: #f09583;
-          transform: translateY(-1px);
-        }
 
         .footer-bottom-bar {
           border-top: 1px solid rgba(255, 255, 255, 0.08);

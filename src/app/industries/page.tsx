@@ -135,12 +135,6 @@ export default function IndustriesPage() {
                 </div>
                 <p className="ind-summary-text">{ind.summary}</p>
                 
-                {ind.caseStudies && ind.caseStudies.length > 0 && (
-                  <div className="ind-case-mini">
-                    <strong>Proof Point:</strong> {ind.caseStudies[0].title} — <em>{ind.caseStudies[0].outcome}</em>
-                  </div>
-                )}
-
                 <Link href={`/industries/${ind.slug}`} className="ind-explore-link">
                   Explore Solutions <ArrowRight size={14} />
                 </Link>
@@ -153,7 +147,7 @@ export default function IndustriesPage() {
       {/* 3. OUR APPROACH WORKS ACROSS EVERY INDUSTRY */}
       <section className="cross-approach-section">
         <div className="container-custom">
-          <div className="text-center" style={{ marginBottom: "3.5rem" }}>
+          <div className="text-left-block" style={{ marginBottom: "3.5rem" }}>
             <h2 className="section-title-serif">Our Approach Works Across Every Industry</h2>
             <p className="section-subtitle-text">While every industry is unique, the challenges are universal. Our proven approach helps organizations across sectors achieve measurable business outcomes.</p>
           </div>
@@ -411,11 +405,15 @@ export default function IndustriesPage() {
           background-color: var(--color-white);
         }
 
+        .text-left-block {
+          text-align: left;
+        }
+
         .section-subtitle-text {
           font-size: 1.05rem;
           color: var(--color-text-muted);
           max-width: 700px;
-          margin: 0.5rem auto 0 auto;
+          margin: 0.5rem 0 0 0;
         }
 
         .approach-flow-row {

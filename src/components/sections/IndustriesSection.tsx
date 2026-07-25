@@ -123,12 +123,6 @@ export default function IndustriesSection() {
                   <h4 className="ind-title-heading">{ind.title}</h4>
                 </div>
                 <p className="ind-summary-text">{ind.summary}</p>
-
-                {ind.caseStudies && ind.caseStudies.length > 0 && (
-                  <div className="ind-case-mini">
-                    <strong>Proof Point:</strong> {ind.caseStudies[0].title} — <em>{ind.caseStudies[0].outcome}</em>
-                  </div>
-                )}
               </div>
             ))}
           </div>
@@ -138,7 +132,7 @@ export default function IndustriesSection() {
       {/* 3. APPROACH */}
       <div className="cross-approach-inner">
         <div className="container-custom">
-          <div className="text-center" style={{ marginBottom: "3.5rem" }}>
+          <div className="text-left-block" style={{ marginBottom: "3.5rem" }}>
             <h3 className="section-sub-heading">Our Approach Works Across Every Industry</h3>
             <p className="section-subtitle-text">While every industry is unique, the challenges are universal. Our proven approach helps organizations across sectors achieve measurable business outcomes.</p>
           </div>
@@ -193,7 +187,7 @@ export default function IndustriesSection() {
           font-size: 0.8125rem;
           font-weight: 700;
           letter-spacing: 0.12em;
-          color: var(--color-coral-border);
+          color: var(--color-coral-dark);
           display: block;
           margin-bottom: 0.75rem;
         }
@@ -387,11 +381,15 @@ export default function IndustriesSection() {
           background-color: var(--color-white);
         }
 
+        .text-left-block {
+          text-align: left;
+        }
+
         .section-subtitle-text {
           font-size: 1.05rem;
           color: var(--color-text-muted);
           max-width: 700px;
-          margin: 0.5rem auto 0 auto;
+          margin: 0.5rem 0 0 0;
         }
 
         .approach-flow-row {

@@ -36,7 +36,7 @@ export default function ClientsSection() {
       {/* 2. OUR GLOBAL PRESENCE MAP */}
       <div className="global-presence-inner">
         <div className="container-custom">
-          <div className="text-center" style={{ marginBottom: "2.5rem" }}>
+          <div className="text-left-block" style={{ marginBottom: "2.5rem" }}>
             <h3 className="section-sub-heading">Our Global Presence</h3>
             <p className="section-subtitle-text">We work with organizations around the world, bringing local understanding and global expertise to every engagement.</p>
           </div>
@@ -71,8 +71,12 @@ export default function ClientsSection() {
                     {isActive && (
                       <div className="nearby-client-card">
                         <div className="card-header-row">
-                          <div className="client-logo-avatar">
-                            <span>{client.logoText}</span>
+                          <div className={`client-logo-avatar ${client.logoUrl ? "has-logo" : ""}`}>
+                            {client.logoUrl ? (
+                              <img src={client.logoUrl} alt={client.name} className="client-logo-img" />
+                            ) : (
+                              <span>{client.logoText}</span>
+                            )}
                           </div>
                           <div>
                             <h4 className="card-client-title">{client.name}</h4>
@@ -112,8 +116,12 @@ export default function ClientsSection() {
                 onMouseEnter={() => setActiveClientId(client.id)}
               >
                 <div className="client-col-brand">
-                  <div className="client-logo-box">
-                    <span className="logo-abbr">{client.logoText}</span>
+                  <div className={`client-logo-box ${client.logoUrl ? "has-logo" : ""}`}>
+                    {client.logoUrl ? (
+                      <img src={client.logoUrl} alt={client.name} className="client-logo-img" />
+                    ) : (
+                      <span className="logo-abbr">{client.logoText}</span>
+                    )}
                   </div>
                   <div>
                     <h5 className="client-name">{client.name}</h5>
@@ -174,7 +182,7 @@ export default function ClientsSection() {
           font-size: 0.8125rem;
           font-weight: 700;
           letter-spacing: 0.12em;
-          color: var(--color-coral-border);
+          color: var(--color-coral-dark);
           display: block;
           margin-bottom: 0.75rem;
         }
@@ -245,11 +253,15 @@ export default function ClientsSection() {
           margin-top: 5rem;
         }
 
+        .text-left-block {
+          text-align: left;
+        }
+
         .section-subtitle-text {
           font-size: 1.05rem;
           color: var(--color-text-muted);
           max-width: 650px;
-          margin: 0 auto;
+          margin: 0 0 1.5rem 0;
         }
 
         .map-wrapper-card {
@@ -265,7 +277,6 @@ export default function ClientsSection() {
           position: relative;
           width: 100%;
           border-radius: var(--border-radius-md);
-          overflow: hidden;
           background-color: #FAFAFA;
         }
 
@@ -274,6 +285,7 @@ export default function ClientsSection() {
           height: auto;
           display: block;
           opacity: 0.75;
+          border-radius: var(--border-radius-md);
         }
 
         .map-pin-badge {
@@ -487,6 +499,24 @@ export default function ClientsSection() {
           font-weight: 700;
           font-size: 0.85rem;
           letter-spacing: 0.05em;
+        }
+
+        .client-logo-avatar.has-logo {
+          background-color: var(--color-white);
+          padding: 2px;
+        }
+
+        .client-logo-box.has-logo {
+          background-color: var(--color-white);
+          padding: 4px;
+          border: 1px solid var(--color-border-subtle);
+        }
+
+        .client-logo-img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          border-radius: 4px;
         }
 
         .client-name {

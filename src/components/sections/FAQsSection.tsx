@@ -95,7 +95,6 @@ export default function FAQsSection() {
         <div className="container-custom">
           <div className="text-center" style={{ marginBottom: "3.5rem" }}>
             <h3 className="section-sub-heading">FAQs</h3>
-            <p className="section-subtitle-text">Explore questions by topic to find what you need.</p>
           </div>
 
           <div className="faqs-categories-grid">
@@ -162,7 +161,7 @@ export default function FAQsSection() {
           font-size: 0.8125rem;
           font-weight: 700;
           letter-spacing: 0.12em;
-          color: var(--color-coral-border);
+          color: var(--color-coral-dark);
           display: block;
           margin-bottom: 0.75rem;
         }
