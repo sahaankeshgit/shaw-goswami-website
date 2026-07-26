@@ -25,6 +25,10 @@ export default function BrandLogo({
       onClick={(e) => {
         if (typeof window !== "undefined" && window.location.pathname === "/") {
           e.preventDefault();
+          
+          // Clear URL hash without reload
+          window.history.pushState(null, "", window.location.pathname + window.location.search);
+          
           const hero = document.getElementById("hero");
           if (hero) {
             hero.scrollIntoView({ behavior: "smooth" });
