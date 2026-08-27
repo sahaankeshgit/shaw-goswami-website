@@ -18,7 +18,9 @@ import {
   Rocket, 
   TrendingUp, 
   ClipboardCheck,
-  CheckCircle2
+  CheckCircle2,
+  ShieldAlert,
+  Boxes
 } from "lucide-react";
 import { consultingServices, engagementSteps, productsList, industryAcceleratorsExamples } from "../../data/solutions";
 
@@ -41,6 +43,11 @@ export default function SolutionsPage() {
   };
 
   const productIcons: { [key: string]: React.ReactNode } = {
+    ShieldAlert: <ShieldAlert size={24} />,
+    Cpu: <Cpu size={24} />,
+    Database: <Database size={24} />,
+    BarChart3: <BarChart3 size={24} />,
+    Boxes: <Boxes size={24} />,
     ClipboardCheck: <ClipboardCheck size={24} />,
     Target: <Target size={24} />,
     Map: <Map size={24} />,
@@ -99,10 +106,61 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* 2. OUR CONSULTING SERVICES */}
+      {/* 2. OUR FEATURED PRODUCTS (Moved above Consulting Services) */}
+      <section className="products-accelerators-section">
+        <div className="container-custom">
+          <div className="text-center" style={{ marginBottom: "2.5rem" }}>
+            <span className="section-tag-centered">FEATURED PRODUCTS</span>
+            <h2 className="section-title-serif">S&G - AI Featured Products</h2>
+            <p className="products-lead-text">
+              Our product portfolio turns recurring enterprise challenges into scalable AI, data, and decision-intelligence solutions, built for real-world deployment and measurable business impact.
+            </p>
+          </div>
+
+          <div className="featured-solutions-bar">
+            <h3 className="featured-solutions-title">Featured Solutions</h3>
+          </div>
+
+          <div className="products-grid-5">
+            {productsList.map((prod) => (
+              <div key={prod.id} className="product-card">
+                <div className="prod-top">
+                  <div className="prod-icon-box">
+                    {productIcons[prod.iconName] || <Rocket size={24} />}
+                  </div>
+                  <h4 className="prod-title">{prod.title}</h4>
+                  <p className="prod-desc">{prod.description}</p>
+                </div>
+                <div className="prod-bottom">
+                  <div className="prod-divider" />
+                  <Link href="/contact" className="prod-link">
+                    Learn more <ArrowRight size={14} />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Accelerators Pill Bar */}
+          <div className="accelerators-bar">
+            <h4 className="accel-label">Industry AI Accelerators (Examples)</h4>
+            <div className="accel-pills-wrap">
+              {industryAcceleratorsExamples.map((ex, idx) => (
+                <span key={idx} className="accel-pill-item">
+                  <CheckCircle2 size={14} color="#0B132B" />
+                  {ex}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. OUR CONSULTING SERVICES */}
       <section className="consulting-services-section">
         <div className="container-custom">
           <div className="text-center" style={{ marginBottom: "3.5rem" }}>
+            <span className="section-tag-centered">CONSULTING SERVICES</span>
             <h2 className="section-title-serif">Our Consulting Services</h2>
             <p className="section-subtitle-text">From strategy to execution, we help you transform with AI and achieve lasting impact.</p>
           </div>
@@ -136,10 +194,11 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* 3. HOW WE ENGAGE */}
+      {/* 4. HOW WE ENGAGE */}
       <section className="how-we-engage-section">
         <div className="container-custom">
           <div className="text-center" style={{ marginBottom: "3.5rem" }}>
+            <span className="section-tag-centered">METHODOLOGY</span>
             <h2 className="section-title-serif">How We Engage</h2>
             <p className="section-subtitle-text">A proven approach from insight to impact.</p>
           </div>
@@ -151,48 +210,10 @@ export default function SolutionsPage() {
                   {stepIcons[step.iconName] || <Search size={22} />}
                   <span className="step-badge-num">{step.stepNumber}</span>
                 </div>
-                <h4 className="engage-step-title">{step.title}</h4>
+                <h3 className="engage-step-title">{step.title}</h3>
                 <p className="engage-step-desc">{step.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. OUR PRODUCTS & ACCELERATORS */}
-      <section className="products-accelerators-section">
-        <div className="container-custom">
-          <div className="text-center" style={{ marginBottom: "3.5rem" }}>
-            <h2 className="section-title-serif">Our Products</h2>
-            <p className="section-subtitle-text">Proprietary accelerators that help you move faster and achieve more.</p>
-          </div>
-
-          <div className="products-grid-5">
-            {productsList.map((prod) => (
-              <div key={prod.id} className="product-card">
-                <div className="prod-icon-box">
-                  {productIcons[prod.iconName] || <Rocket size={24} />}
-                </div>
-                <h4 className="prod-title">{prod.title}</h4>
-                <p className="prod-desc">{prod.description}</p>
-                <Link href="/contact" className="prod-link">
-                  Learn more <ArrowRight size={14} />
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          {/* Accelerators Pill Bar */}
-          <div className="accelerators-bar">
-            <h5 className="accel-label">Industry AI Accelerators (Examples)</h5>
-            <div className="accel-pills-wrap">
-              {industryAcceleratorsExamples.map((ex, idx) => (
-                <span key={idx} className="accel-pill-item">
-                  <CheckCircle2 size={14} color="#0B132B" />
-                  {ex}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -243,6 +264,17 @@ export default function SolutionsPage() {
           opacity: 0.8;
           display: block;
           margin-bottom: 0.75rem;
+        }
+
+        .section-tag-centered {
+          font-family: var(--font-secondary);
+          font-size: 0.8125rem;
+          font-weight: 700;
+          letter-spacing: 0.12em;
+          color: var(--color-coral-dark);
+          display: inline-block;
+          margin-bottom: 0.75rem;
+          text-transform: uppercase;
         }
 
         .hero-heading {
@@ -356,17 +388,181 @@ export default function SolutionsPage() {
           color: var(--color-navy-dark);
         }
 
-        /* CONSULTING SERVICES */
-        .consulting-services-section {
+        /* PRODUCTS SECTION */
+        .products-accelerators-section {
           padding: var(--spacing-section) 0;
-          background-color: var(--color-cream-bg);
+          background-color: var(--color-white);
         }
 
         .section-title-serif {
           font-family: var(--font-primary);
           font-size: 2.25rem;
           color: var(--color-navy-dark);
-          margin-bottom: 0.5rem;
+          margin-bottom: 0.75rem;
+        }
+
+        .products-lead-text {
+          font-size: 1.1rem;
+          color: var(--color-text-dark);
+          max-width: 820px;
+          margin: 0 auto;
+          line-height: 1.6;
+          opacity: 0.9;
+        }
+
+        .featured-solutions-bar {
+          margin: 3rem 0 1.5rem 0;
+          display: flex;
+          align-items: center;
+        }
+
+        .featured-solutions-title {
+          font-family: var(--font-primary);
+          font-size: 1.4rem;
+          font-weight: 700;
+          color: var(--color-navy-dark);
+          position: relative;
+          padding-bottom: 0.5rem;
+        }
+
+        .featured-solutions-title::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 40px;
+          height: 3px;
+          background-color: var(--color-coral-dark);
+          border-radius: 2px;
+        }
+
+        .products-grid-5 {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 1.75rem;
+          margin-bottom: 2.5rem;
+        }
+
+        .product-card {
+          background-color: var(--color-cream-bg);
+          padding: 2rem 1.75rem;
+          border-radius: var(--border-radius-md);
+          border: 1.5px solid #E2E8F0;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          box-shadow: 0 4px 18px rgba(11, 19, 43, 0.04);
+          transition: all 0.25s ease;
+        }
+
+        .product-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 10px 28px rgba(11, 19, 43, 0.08);
+          border-color: #F5DCDC;
+        }
+
+        .prod-top {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .prod-icon-box {
+          width: 48px;
+          height: 48px;
+          border-radius: var(--border-radius-sm);
+          background-color: var(--color-coral-light);
+          color: var(--color-navy-dark);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1.25rem;
+          flex-shrink: 0;
+        }
+
+        .prod-title {
+          font-family: var(--font-primary);
+          font-size: 1.2rem;
+          color: var(--color-navy-dark);
+          margin-bottom: 0.75rem;
+          line-height: 1.35;
+          font-weight: 700;
+        }
+
+        .prod-desc {
+          font-size: 0.9rem;
+          color: var(--color-text-muted);
+          line-height: 1.6;
+          margin-bottom: 0;
+        }
+
+        .prod-divider {
+          width: 100%;
+          height: 1px;
+          border-top: 1px dashed var(--color-border-light);
+          margin: 1.5rem 0 1rem 0;
+        }
+
+        .prod-bottom {
+          margin-top: auto;
+        }
+
+        .prod-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-size: 0.8125rem;
+          font-weight: 700;
+          color: var(--color-navy-dark);
+          text-decoration: none;
+          transition: color 0.2s ease;
+        }
+
+        .prod-link:hover {
+          color: var(--color-coral-dark);
+        }
+
+        .accelerators-bar {
+          background-color: var(--color-cream-bg);
+          padding: 1.75rem 2rem;
+          border-radius: var(--border-radius-md);
+          border: 1.5px solid #E2E8F0;
+          box-shadow: 0 4px 18px rgba(11, 19, 43, 0.04);
+        }
+
+        .accel-label {
+          font-family: var(--font-secondary);
+          font-size: 0.8125rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          color: var(--color-navy-dark);
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+        }
+
+        .accel-pills-wrap {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          flex-wrap: wrap;
+        }
+
+        .accel-pill-item {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-size: 0.85rem;
+          font-weight: 600;
+          color: var(--color-navy-dark);
+          background-color: var(--color-white);
+          padding: 0.45rem 0.95rem;
+          border-radius: 6px;
+          border: 1px solid rgba(11, 19, 43, 0.08);
+        }
+
+        /* CONSULTING SERVICES */
+        .consulting-services-section {
+          padding: var(--spacing-section) 0;
+          background-color: var(--color-cream-bg);
         }
 
         .section-subtitle-text {
@@ -439,11 +635,11 @@ export default function SolutionsPage() {
           padding-top: 1rem;
           border-top: 1px dashed var(--color-border-light);
         }
+
+        .cap-col {
+          display: flex;
+          flex-direction: column;
           gap: 0.5rem;
-          padding-top: 1rem;
-          border-top: 1px dashed var(--color-border-light);
-          margin-top: auto;
-          margin-bottom: 1.25rem;
         }
 
         .cap-item {
@@ -521,93 +717,6 @@ export default function SolutionsPage() {
           font-size: 0.85rem;
           color: var(--color-text-muted);
           line-height: 1.5;
-        }
-
-        /* PRODUCTS */
-        .products-accelerators-section {
-          padding: var(--spacing-section) 0;
-          background-color: var(--color-cream-bg);
-        }
-
-        .products-grid-5 {
-          display: grid;
-          grid-template-columns: repeat(5, 1fr);
-          gap: 1.25rem;
-          margin-bottom: 2.5rem;
-        }
-
-        .product-card {
-          background-color: var(--color-white);
-          padding: 1.75rem 1.25rem;
-          border-radius: var(--border-radius-md);
-          border: 1px solid var(--color-border-subtle);
-          display: flex;
-          flex-direction: column;
-        }
-
-        .prod-icon-box {
-          color: var(--color-coral-hero);
-          margin-bottom: 1rem;
-        }
-
-        .prod-title {
-          font-family: var(--font-primary);
-          font-size: 1.05rem;
-          color: var(--color-navy-dark);
-          margin-bottom: 0.5rem;
-        }
-
-        .prod-desc {
-          font-size: 0.825rem;
-          color: var(--color-text-muted);
-          margin-bottom: 1rem;
-          flex-grow: 1;
-        }
-
-        .prod-link {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.3rem;
-          font-size: 0.785rem;
-          font-weight: 700;
-          color: var(--color-navy-dark);
-          text-decoration: none;
-        }
-
-        .accelerators-bar {
-          background-color: var(--color-white);
-          padding: 1.5rem 2rem;
-          border-radius: var(--border-radius-md);
-          border: 1px solid var(--color-border-subtle);
-        }
-
-        .accel-label {
-          font-family: var(--font-secondary);
-          font-size: 0.8125rem;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-          color: var(--color-navy-dark);
-          text-transform: uppercase;
-          margin-bottom: 1rem;
-        }
-
-        .accel-pills-wrap {
-          display: flex;
-          align-items: center;
-          gap: 1.25rem;
-          flex-wrap: wrap;
-        }
-
-        .accel-pill-item {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.4rem;
-          font-size: 0.85rem;
-          font-weight: 600;
-          color: var(--color-navy-dark);
-          background-color: var(--color-cream-bg);
-          padding: 0.4rem 0.85rem;
-          border-radius: 6px;
         }
 
         /* CTA BANNER */

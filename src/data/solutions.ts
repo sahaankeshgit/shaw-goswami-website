@@ -168,34 +168,34 @@ export const engagementSteps: EngagementStep[] = [
 
 export const productsList: ProductAccelerator[] = [
   {
-    id: "executive-strategy-assessment",
-    title: "Executive Strategy Assessment",
-    description: "Assess business performance, strategic priorities, and AI readiness.",
-    iconName: "ClipboardCheck"
+    id: "leak-anomaly-oil-gas",
+    title: "Leak and Anomaly Detection in Oil & Gas",
+    description: "AI-powered monitoring that detects leaks, equipment anomalies, and operational risks in real time, improving safety, reducing downtime, and minimizing losses.",
+    iconName: "ShieldAlert"
   },
   {
-    id: "ai-opportunity-discovery",
-    title: "AI Opportunity Discovery",
-    description: "Identify and prioritize AI use cases for maximum business value.",
-    iconName: "Target"
+    id: "ai-enabled-crm-erp",
+    title: "AI Enabled CRM and ERP",
+    description: "Intelligent enterprise platforms that automate workflows, enhance decision-making, and unify customer and operational data for greater efficiency.",
+    iconName: "Cpu"
   },
   {
-    id: "enterprise-ai-roadmap",
-    title: "Enterprise AI Roadmap",
-    description: "A practical roadmap aligning AI investments with business goals.",
-    iconName: "Map"
+    id: "enterprise-data-lakehouse",
+    title: "Enterprise Data Lake house",
+    description: "A modern, scalable data foundation that unifies data from disparate enterprise systems into a single trusted platform, enabling real-time analytics, AI-driven insights, and seamless data consumption across downstream applications.",
+    iconName: "Database"
   },
   {
-    id: "ai-governance-framework",
-    title: "AI Governance Framework",
-    description: "Enterprise-ready policies and operating models for responsible AI.",
-    iconName: "ShieldCheck"
+    id: "executive-insight-dashboard",
+    title: "Executive Insight Dashboard",
+    description: "Interactive executive dashboards that transform complex operational data into real-time business intelligence, enabling faster and more informed decisions.",
+    iconName: "BarChart3"
   },
   {
-    id: "industry-accelerators",
-    title: "Industry Accelerators",
-    description: "Pre-built frameworks and AI solutions for common industry challenges.",
-    iconName: "Rocket"
+    id: "llm-orchestration",
+    title: "LLM Orchestration",
+    description: "Turbo charge the underlying LLM call by incorporating privacy, governance and near unlimited context.",
+    iconName: "Boxes"
   }
 ];
 
