@@ -16,8 +16,8 @@ export default function BrandLogo({
 }: BrandLogoProps) {
   const isLight = variant === "light";
   const logoSrc = isLight 
-    ? "/images/logo_master_horizontal_white.png" 
-    : "/images/logo_master_horizontal.png";
+    ? "/images/logo_master_horizontal_white_ai.png" 
+    : "/images/logo_master_horizontal_ai.png";
 
   return (
     <Link 
@@ -41,15 +41,13 @@ export default function BrandLogo({
       aria-label="Shaw & Goswami AI Home"
     >
       {layout === "horizontal" ? (
-        <span className="logo-horizontal-group">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img 
-            src={logoSrc} 
-            alt="Shaw & Goswami" 
-            className="logo-img-master-horizontal"
-          />
-          <span className={`logo-ai-suffix ${isLight ? "is-light" : ""}`}>AI</span>
-        </span>
+        /* "AI" is built from the logo's own A and I letterforms, so it matches exactly */
+        /* eslint-disable-next-line @next/next/no-img-element */
+        <img
+          src={logoSrc}
+          alt="Shaw & Goswami AI"
+          className="logo-img-master-horizontal"
+        />
       ) : (
         <div className="stacked-logo-wrapper">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -93,31 +91,17 @@ export default function BrandLogo({
           opacity: 0.85;
         }
 
-        .logo-horizontal-group {
-          display: inline-flex;
-          align-items: center;
-        }
-
-        .logo-ai-suffix {
-          font-family: var(--font-cinzel), "Cinzel", "Trajan Pro", Georgia, serif;
-          font-size: 19px;
-          font-weight: 500;
-          line-height: 1;
-          letter-spacing: 0.02em;
-          color: #00254A;
-          margin-left: 0.4em;
-          padding-top: 1px;
-        }
-
-        .logo-ai-suffix.is-light {
-          color: #FFFFFF;
-        }
-
         .logo-img-master-horizontal {
           height: 34px;
           width: auto;
           object-fit: contain;
           display: block;
+        }
+
+        @media (max-width: 400px) {
+          .logo-img-master-horizontal {
+            height: 28px;
+          }
         }
 
         .stacked-logo-wrapper {
