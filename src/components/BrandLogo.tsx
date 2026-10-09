@@ -41,12 +41,15 @@ export default function BrandLogo({
       aria-label="Shaw & Goswami AI Home"
     >
       {layout === "horizontal" ? (
-        /* eslint-disable-next-line @next/next/no-img-element */
-        <img 
-          src={logoSrc} 
-          alt="Shaw & Goswami AI" 
-          className="logo-img-master-horizontal"
-        />
+        <span className="logo-horizontal-group">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img 
+            src={logoSrc} 
+            alt="Shaw & Goswami" 
+            className="logo-img-master-horizontal"
+          />
+          <span className={`logo-ai-suffix ${isLight ? "is-light" : ""}`}>AI</span>
+        </span>
       ) : (
         <div className="stacked-logo-wrapper">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -88,6 +91,26 @@ export default function BrandLogo({
 
         .brand-logo-container:hover {
           opacity: 0.85;
+        }
+
+        .logo-horizontal-group {
+          display: inline-flex;
+          align-items: center;
+        }
+
+        .logo-ai-suffix {
+          font-family: var(--font-cinzel), "Cinzel", "Trajan Pro", Georgia, serif;
+          font-size: 19px;
+          font-weight: 500;
+          line-height: 1;
+          letter-spacing: 0.02em;
+          color: #00254A;
+          margin-left: 0.4em;
+          padding-top: 1px;
+        }
+
+        .logo-ai-suffix.is-light {
+          color: #FFFFFF;
         }
 
         .logo-img-master-horizontal {

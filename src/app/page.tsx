@@ -48,8 +48,8 @@ export default function HomePage() {
         <div className="container-custom">
           <div className="cta-inner-card">
             <div className="cta-left-text">
-              <h2>Ready to unlock AI’s true potential in your business?</h2>
-              <p>From readiness and roadmap to implementation, adoption and continuous improvement.</p>
+              <h2>Build your intelligent enterprise.</h2>
+              <p>Strategy. Solutions. People. Lasting impact.</p>
             </div>
             <div className="cta-right-btn">
               <Link href="/contact" className="btn-cta-coral">
@@ -76,6 +76,12 @@ export default function HomePage() {
           background-color: var(--color-navy-dark);
           border-radius: var(--border-radius-lg);
           padding: 2.5rem 3.5rem;
+          position: relative;
+          overflow: hidden;
+          background-image: url("/images/strands-cta.svg");
+          background-repeat: no-repeat;
+          background-position: right center;
+          background-size: auto 140%;
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -92,8 +98,14 @@ export default function HomePage() {
           line-height: 1.3;
         }
 
+        .cta-left-text,
+        .cta-right-btn {
+          position: relative;
+          z-index: 1;
+        }
+
         .cta-left-text p {
-          color: #A0AEC0;
+          color: #CBD5E0;
           font-size: 0.95rem;
           margin: 0;
         }

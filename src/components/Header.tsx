@@ -178,6 +178,17 @@ export default function Header() {
         }
 
         .header-inner {
+          animation: headerDrop 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        @keyframes headerDrop {
+          from { opacity: 0; transform: translateY(-14px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .header-inner { animation: none; }
+        }
+
+        .header-inner {
           max-width: 1380px;
           margin: 0 auto;
           padding: 0 1.5rem;
