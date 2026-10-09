@@ -97,7 +97,7 @@ export default async function SolutionSubPage({ params }: SolutionPageProps) {
 
               {/* Approach */}
               <div className="detail-block">
-                <h2 className="detail-block-title">Our Consulting Approach</h2>
+                <h2 className="detail-block-title">Our Transformation Approach</h2>
                 <p className="detail-text">{solution.approach}</p>
               </div>
 

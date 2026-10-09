@@ -5,10 +5,10 @@ import { Brain, Signpost, HelpCircle, Users, Layers, Target, TrendingUp, Search,
 
 export default function AboutSection() {
   const steps = [
-    { num: "01", icon: <Search size={24} />, title: "UNDERSTAND", desc: "We go deep into your business to identify operational friction and growth opportunities." },
-    { num: "02", icon: <Compass size={24} />, title: "DESIGN", desc: "We define the right AI strategy and roadmap aligned to your business goals." },
-    { num: "03", icon: <Code size={24} />, title: "BUILD", desc: "We develop and integrate AI solutions that are secure, scalable, and practical." },
-    { num: "04", icon: <BarChart3 size={24} />, title: "DELIVER", desc: "We drive adoption, measure impact, and ensure continuous value realization." }
+    { num: "01", icon: <Search size={24} />, title: "DISCOVER", desc: "We go deep into your business to diagnose operational friction and identify measurable opportunities." },
+    { num: "02", icon: <Compass size={24} />, title: "PREPARE", desc: "We define the strategy and roadmap, and strengthen data, systems, governance and team readiness." },
+    { num: "03", icon: <Code size={24} />, title: "BUILD", desc: "We develop and integrate AI into your existing workflows—secure, scalable and practical." },
+    { num: "04", icon: <BarChart3 size={24} />, title: "EMBED & SCALE", desc: "We support adoption, measure outcomes, expand what works and continuously improve." }
   ];
 
   return (
@@ -18,13 +18,13 @@ export default function AboutSection() {
         <div className="about-header-grid">
           <div className="hero-text-block">
             <span className="section-tag">ABOUT US</span>
-            <h2 className="section-title-serif">About Shaw & Goswami</h2>
+            <h2 className="section-title-serif">About Shaw &amp; Goswami AI</h2>
             <div className="title-divider" />
             <p className="hero-lead">
-              We bridge the gap between AI potential and business performance.
+              We help organisations build the capabilities, systems and ways of working needed to succeed in a world reshaped by AI.
             </p>
             <p className="hero-sub">
-              Our mission is simple: help leadership teams identify where AI creates real value and execute roadmaps that deliver measurable growth.
+              We connect business priorities with practical AI delivery, bringing strategy, engineering and organisational change together to create measurable value.
             </p>
           </div>
 
@@ -81,7 +81,7 @@ export default function AboutSection() {
               <h3 className="section-sub-title">Our Story</h3>
               <div className="title-underline-left" />
               <p className="story-paragraph">
-                Shaw & Goswami was built to bridge this gap.
+                Shaw &amp; Goswami AI was built to bridge this gap.
               </p>
               <p className="story-paragraph">
                 With 40+ years of combined experience across AI, data engineering, product development, and business consulting, we combine deep technical expertise with business acumen to turn AI potential into measurable outcomes.
@@ -213,6 +213,7 @@ export default function AboutSection() {
 
         .stadium-frame {
           width: 380px;
+          max-width: 100%;
           height: 380px;
           border-radius: 190px 190px 20px 20px;
           overflow: hidden;
@@ -244,6 +245,11 @@ export default function AboutSection() {
           position: relative;
           display: flex;
           justify-content: center;
+          min-width: 0;
+        }
+
+        .about-header-grid > * {
+          min-width: 0;
         }
 
         /* Gap Section */

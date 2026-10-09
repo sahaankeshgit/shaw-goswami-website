@@ -26,14 +26,14 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
-  title: "Shaw & Goswami Consulting | Where AI Meets Business Goals",
-  description: "We help leadership teams pinpoint operational friction and execute AI roadmaps that solve real problems and deliver measurable growth.",
+  title: "Shaw & Goswami AI | The AI Transformation Engine",
+  description: "Prepare, implement and scale AI transformation with Shaw & Goswami AI through business strategy, data, engineering and organisational change.",
   metadataBase: new URL("https://shawandgoswami.in"),
   openGraph: {
-    title: "Shaw & Goswami Consulting",
-    description: "Where AI Meets Business Goals",
+    title: "S&G AI: The AI Transformation Engine.",
+    description: "Prepare your organisation for a world reshaped by AI.",
     url: "https://shawandgoswami.in",
-    siteName: "Shaw & Goswami Consulting",
+    siteName: "Shaw & Goswami AI",
     locale: "en_US",
     type: "website",
   },

@@ -38,11 +38,11 @@ export default function IndustriesSection() {
   };
 
   const approachSteps = [
-    { num: 1, title: "Understand", desc: "We immerse ourselves in your business, industry, and challenges.", icon: <Search size={20} /> },
-    { num: 2, title: "Diagnose", desc: "We uncover root causes, opportunities, and hidden value.", icon: <Target size={20} /> },
-    { num: 3, title: "Strategize", desc: "We define the right AI and business strategy for impact.", icon: <Compass size={20} /> },
-    { num: 4, title: "Implement", desc: "We build and integrate custom solutions that deliver results.", icon: <Code size={20} /> },
-    { num: 5, title: "Optimize", desc: "We measure outcomes, refine continuously, and drive long-term value.", icon: <TrendingUp size={20} /> }
+    { num: 1, title: "Discover", desc: "We immerse ourselves in your business and industry to diagnose challenges and opportunities.", icon: <Search size={20} /> },
+    { num: 2, title: "Prepare", desc: "We define the strategy and roadmap, and strengthen data, systems and governance.", icon: <Compass size={20} /> },
+    { num: 3, title: "Build", desc: "We develop and integrate AI solutions into your existing workflows.", icon: <Code size={20} /> },
+    { num: 4, title: "Embed", desc: "We support adoption, redesign processes and measure outcomes.", icon: <Target size={20} /> },
+    { num: 5, title: "Scale", desc: "We expand what works and continuously improve for long-term value.", icon: <TrendingUp size={20} /> }
   ];
 
   const whyChoosePillars = [
@@ -62,7 +62,7 @@ export default function IndustriesSection() {
             <span className="section-tag">INDUSTRIES</span>
             <h2 className="section-title-serif">Sector Agnostic. Outcome Focused.</h2>
             <p className="hero-subtext">
-              We bring deep AI and business expertise to every industry, helping organizations solve their most complex challenges and create lasting value.
+              AI transformation shaped around your industry, operations and goals. We bring deep AI and business expertise to every industry, helping organizations solve their most complex challenges and create lasting value.
             </p>
 
             <div className="hero-badges-row">

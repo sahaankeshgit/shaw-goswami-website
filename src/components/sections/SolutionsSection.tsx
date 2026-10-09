@@ -39,6 +39,7 @@ export default function SolutionsSection() {
     Target: <Target size={22} />,
     Map: <Map size={22} />,
     Rocket: <Rocket size={22} />,
+    Code: <Code size={22} />,
     TrendingUp: <TrendingUp size={22} />
   };
 
@@ -62,9 +63,9 @@ export default function SolutionsSection() {
         <div className="solutions-hero-grid">
           <div className="hero-text-block">
             <span className="section-tag">PRODUCT & SERVICES</span>
-            <h2 className="section-title-serif">AI Strategies That Drive Business Growth</h2>
+            <h2 className="section-title-serif">Practical AI. Embedded in your business.</h2>
             <p className="hero-subtext">
-              We combine deep AI expertise with strategic business consulting to help organizations identify opportunities, solve complex challenges, and deliver measurable outcomes.
+              We connect business strategy, data foundations and AI engineering to build solutions that fit your operations and support measurable improvement.
             </p>
 
             <div className="hero-badges-row">
@@ -99,14 +100,14 @@ export default function SolutionsSection() {
         </div>
       </div>
 
-      {/* 2. FEATURED PRODUCTS SECTION (Moved above Consulting Services) */}
+      {/* 2. FEATURED PRODUCTS SECTION (Moved above Transformation Capabilities) */}
       <div className="products-accelerators-inner">
         <div className="container-custom">
           <div className="text-center" style={{ marginBottom: "2.5rem" }}>
             <span className="section-tag-centered">FEATURED PRODUCTS</span>
-            <h3 className="section-sub-heading">S&G - AI Featured Products</h3>
+            <h3 className="section-sub-heading">S&amp;G AI Featured Products</h3>
             <p className="products-lead-text">
-              Our product portfolio turns recurring enterprise challenges into scalable AI, data, and decision-intelligence solutions, built for real-world deployment and measurable business impact.
+              Our product portfolio turns recurring enterprise challenges into scalable AI, data, and decision-intelligence solutions, built for real-world deployment and measurable business impact. Readiness, integration, adoption and improvement around every solution.
             </p>
           </div>
 
@@ -149,13 +150,13 @@ export default function SolutionsSection() {
         </div>
       </div>
 
-      {/* 3. OUR CONSULTING SERVICES */}
+      {/* 3. OUR TRANSFORMATION CAPABILITIES */}
       <div className="consulting-services-inner">
         <div className="container-custom">
           <div className="text-center" style={{ marginBottom: "3.5rem" }}>
-            <span className="section-tag-centered">CONSULTING SERVICES</span>
-            <h3 className="section-sub-heading">Our Consulting Services</h3>
-            <p className="section-subtitle-text">From strategy to execution, we help you transform with AI and achieve lasting impact.</p>
+            <span className="section-tag-centered">TRANSFORMATION CAPABILITIES</span>
+            <h3 className="section-sub-heading">Our Transformation Capabilities</h3>
+            <p className="section-subtitle-text">Connected capabilities to prepare your organisation, build practical AI solutions and embed lasting change.</p>
           </div>
 
           <div className="services-grid-6">
@@ -182,13 +183,13 @@ export default function SolutionsSection() {
         </div>
       </div>
 
-      {/* 4. HOW WE ENGAGE */}
+      {/* 4. HOW OUR TRANSFORMATION ENGINE WORKS */}
       <div className="how-we-engage-inner">
         <div className="container-custom">
           <div className="text-center" style={{ marginBottom: "3.5rem" }}>
             <span className="section-tag-centered">METHODOLOGY</span>
-            <h3 className="section-sub-heading">How We Engage</h3>
-            <p className="section-subtitle-text">A proven approach from insight to impact.</p>
+            <h3 className="section-sub-heading">How Our Transformation Engine Works</h3>
+            <p className="section-subtitle-text">One connected journey from business priorities to practical AI adoption and continuous improvement.</p>
           </div>
 
           <div className="engage-flow-row">

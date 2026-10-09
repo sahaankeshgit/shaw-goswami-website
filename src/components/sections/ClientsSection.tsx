@@ -147,7 +147,7 @@ export default function ClientsSection() {
       <div className="why-choose-inner">
         <div className="container-custom">
           <div className="text-center" style={{ marginBottom: "3.5rem" }}>
-            <h3 className="section-sub-heading">Why Organizations Choose Shaw & Goswami</h3>
+            <h3 className="section-sub-heading">Why Organizations Choose Shaw &amp; Goswami AI</h3>
             <div className="title-underline-center" />
           </div>
 

@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="footer-col brand-col">
             <BrandLogo layout="horizontal" variant="light" />
             <p className="footer-tagline" style={{ marginTop: "1rem" }}>
-              Where AI Meets Business Goals. We help leadership teams pinpoint operational friction and execute AI roadmaps that deliver measurable P&L growth.
+              Shaw & Goswami AI brings together strategy, data, engineering and organisational change to help businesses prepare, implement and scale AI transformation.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ export default function Footer() {
             <h4 className="footer-heading">Connect With Us</h4>
             <div className="footer-cta-box" style={{ marginTop: "1rem" }}>
               <Link href="/contact" className="btn-cta-coral">
-                BOOK A STRATEGY CALL <ArrowRight size={14} />
+                START YOUR AI TRANSFORMATION <ArrowRight size={14} />
               </Link>
             </div>
           </div>

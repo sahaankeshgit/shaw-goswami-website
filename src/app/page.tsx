@@ -49,11 +49,11 @@ export default function HomePage() {
           <div className="cta-inner-card">
             <div className="cta-left-text">
               <h2>Ready to unlock AI’s true potential in your business?</h2>
-              <p>Let’s build your roadmap to growth with strategy, data, and execution.</p>
+              <p>From readiness and roadmap to implementation, adoption and continuous improvement.</p>
             </div>
             <div className="cta-right-btn">
               <Link href="/contact" className="btn-cta-coral">
-                BOOK A STRATEGY CALL <ArrowRight size={16} />
+                START YOUR AI TRANSFORMATION <ArrowRight size={16} />
               </Link>
             </div>
           </div>

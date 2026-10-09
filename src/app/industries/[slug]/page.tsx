@@ -128,7 +128,7 @@ export default async function IndustrySubPage({ params }: IndustryPageProps) {
 
               {/* Relevant Solutions */}
               <div className="detail-block">
-                <h2 className="detail-block-title">Relevant Consulting Engines</h2>
+                <h2 className="detail-block-title">Relevant Transformation Solutions</h2>
                 <div className="services-grid">
                   {industry.solutions.map((solSlug, idx) => (
                     <Link href={`/solutions/${solSlug}`} key={idx} className="service-bullet-card hover-card">

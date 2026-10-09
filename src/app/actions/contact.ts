@@ -68,6 +68,6 @@ export async function submitContactForm(
 
   return {
     success: true,
-    message: "Thank you for scheduling a strategy consultation. A Shaw & Goswami consulting partner will review your organization's challenges and contact you within 24 business hours.",
+    message: "Thank you for your enquiry. The Shaw & Goswami AI team will review your priorities and get back to you.",
   };
 }

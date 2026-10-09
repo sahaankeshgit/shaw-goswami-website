@@ -137,31 +137,31 @@ export const engagementSteps: EngagementStep[] = [
   {
     stepNumber: 1,
     title: "Discover",
-    description: "Understand your business, strategy, operations, customers, and challenges.",
+    description: "Understand and diagnose your business to identify priorities and measurable opportunities.",
     iconName: "Search"
   },
   {
     stepNumber: 2,
-    title: "Diagnose",
-    description: "Identify root causes, bottlenecks, hidden risks, and growth opportunities.",
-    iconName: "Target"
-  },
-  {
-    stepNumber: 3,
-    title: "Strategize",
-    description: "Develop a practical roadmap with clear priorities, investment plans, and measurable outcomes.",
+    title: "Prepare",
+    description: "Set the strategy and roadmap, and strengthen data, systems, governance and team readiness.",
     iconName: "Map"
   },
   {
+    stepNumber: 3,
+    title: "Build",
+    description: "Develop and integrate AI into your existing workflows.",
+    iconName: "Code"
+  },
+  {
     stepNumber: 4,
-    title: "Transform",
-    description: "Implement business, digital, and AI solutions that drive change.",
-    iconName: "Rocket"
+    title: "Embed",
+    description: "Support adoption, redesign processes and measure outcomes.",
+    iconName: "Target"
   },
   {
     stepNumber: 5,
     title: "Scale",
-    description: "Measure impact, optimize execution, and continuously improve.",
+    description: "Expand what works and continuously improve.",
     iconName: "TrendingUp"
   }
 ];
@@ -175,13 +175,13 @@ export const productsList: ProductAccelerator[] = [
   },
   {
     id: "ai-enabled-crm-erp",
-    title: "AI Enabled CRM and ERP",
+    title: "AI-enabled CRM & ERP",
     description: "Intelligent enterprise platforms that automate workflows, enhance decision-making, and unify customer and operational data for greater efficiency.",
     iconName: "Cpu"
   },
   {
     id: "enterprise-data-lakehouse",
-    title: "Enterprise Data Lake house",
+    title: "Enterprise Data Lakehouse",
     description: "A modern, scalable data foundation that unifies data from disparate enterprise systems into a single trusted platform, enabling real-time analytics, AI-driven insights, and seamless data consumption across downstream applications.",
     iconName: "Database"
   },

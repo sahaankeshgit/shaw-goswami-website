@@ -231,6 +231,10 @@ export default function FAQsSection() {
           align-items: center;
         }
 
+        .faqs-hero-grid > * {
+          min-width: 0;
+        }
+
         .hero-qa-graphic {
           position: relative;
           height: 300px;

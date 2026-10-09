@@ -115,7 +115,7 @@ export default function Header() {
           {/* Primary Visible Button CTA */}
           <div className="header-cta-block">
             <Link href="/contact" className="btn-cta-navy">
-              BOOK A STRATEGY CALL <ArrowRight size={15} />
+              START YOUR AI TRANSFORMATION <ArrowRight size={15} />
             </Link>
           </div>
 
@@ -148,7 +148,7 @@ export default function Header() {
               ))}
               <li style={{ marginTop: "1.5rem" }}>
                 <Link href="/contact" className="btn-cta-navy" style={{ width: "100%", justifyContent: "center" }}>
-                  BOOK A STRATEGY CALL <ArrowRight size={16} />
+                  START YOUR AI TRANSFORMATION <ArrowRight size={16} />
                 </Link>
               </li>
             </ul>

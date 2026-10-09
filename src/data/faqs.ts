@@ -21,8 +21,8 @@ export const faqData: FAQCategory[] = [
     iconName: "Users",
     questions: [
       {
-        question: "What does Shaw & Goswami do?",
-        answer: "We help organizations solve complex business challenges through management consulting, AI strategy, data engineering, and technology implementation, with a focus on measurable business outcomes."
+        question: "What does Shaw & Goswami AI do?",
+        answer: "We help organisations prepare, implement and scale AI transformation by connecting business strategy, data engineering, AI development, governance and organisational change."
       },
       {
         question: "Which industries do you work with?",
@@ -37,7 +37,7 @@ export const faqData: FAQCategory[] = [
         answer: "We start with a discovery session to assess whether we can deliver tangible, measurable impact for your business goals. If we determine that a different approach or specialized vendor is better suited, we provide honest recommendations."
       },
       {
-        question: "What makes Shaw & Goswami different?",
+        question: "What makes Shaw & Goswami AI different?",
         answer: "We start with business strategy—not technology. With 40+ years of combined experience across AI, data engineering, product development, and management consulting, we bridge the gap between technical capability and P&L results."
       }
     ]
@@ -80,7 +80,7 @@ export const faqData: FAQCategory[] = [
     questions: [
       {
         question: "Do you only advise on AI strategy, or do you also implement?",
-        answer: "No, we support the complete journey—from initial strategic assessment and roadmap development to full technology implementation, integration, governance, and continuous optimization."
+        answer: "Our capabilities cover strategy and readiness through solution development, integration and adoption. We define the scope around your business needs and work with your teams to deliver and improve practical AI solutions."
       },
       {
         question: "How long does a typical engagement take?",
@@ -88,7 +88,7 @@ export const faqData: FAQCategory[] = [
       },
       {
         question: "What does the engagement process look like?",
-        answer: "Our proven 5-step methodology includes Discover (understanding context), Diagnose (pinpointing root causes), Strategize (building the roadmap), Transform (implementing solutions), and Scale (measuring ROI and expanding value)."
+        answer: "Our transformation engine follows five connected stages: Discover (understanding and diagnosing your business), Prepare (strategy, roadmap and readiness), Build (developing and integrating AI into your workflows), Embed (adoption, process change and measuring outcomes), and Scale (expanding what works and continuously improving). The engine describes how our capabilities work together—the solutions and engagement are shaped around your organisation."
       },
       {
         question: "How do you measure success?",
@@ -133,8 +133,8 @@ export const faqData: FAQCategory[] = [
 
 export const quickAnswerHighlights = [
   {
-    question: "What does Shaw & Goswami do?",
-    answer: "We help organizations solve complex business challenges through strategy, AI, data engineering, and technology implementation to deliver measurable business outcomes."
+    question: "What does Shaw & Goswami AI do?",
+    answer: "We help organisations prepare, implement and scale AI transformation by connecting business strategy, data engineering, AI development, governance and organisational change."
   },
   {
     question: "How do you decide if AI is the right solution?",

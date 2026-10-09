@@ -9,19 +9,23 @@ export default function HeroSection() {
     <section id="hero" className="hero-section snap-section">
       <div className="hero-container">
         <div className="hero-content">
+          <span className="hero-eyebrow">SHAW &amp; GOSWAMI AI</span>
           <h1 className="hero-title">
-            Where AI<br />
-            Meets Business Goals
+            S&amp;G AI: The AI<br />
+            Transformation Engine.
           </h1>
+          <p className="hero-tagline">
+            Prepare your organisation for a world reshaped by AI.
+          </p>
           <p className="hero-subtitle">
-            Businesses don’t need more AI experiments — they need P&L growth. We help leadership teams pinpoint operational friction and execute AI roadmaps that solve real problems.
+            We bring together business strategy, data, AI engineering and organisational change to transform how your business operates, makes decisions and grows—from readiness and roadmap to implementation, adoption and continuous improvement.
           </p>
           <div className="hero-actions">
             <Link href="/contact" className="btn-solid-navy">
-              BOOK A STRATEGY CALL <ArrowRight size={16} />
+              START YOUR AI TRANSFORMATION <ArrowRight size={16} />
             </Link>
-            <a href="#about" className="btn-outline-navy">
-              EXPLORE OUR APPROACH <ArrowRight size={16} />
+            <a href="#solutions" className="btn-outline-navy">
+              EXPLORE OUR SOLUTIONS <ArrowRight size={16} />
             </a>
           </div>
 
@@ -29,17 +33,17 @@ export default function HeroSection() {
           <div className="hero-pills-bar">
             <div className="pill-item">
               <Target size={18} />
-              <span>Diagnose Friction</span>
+              <span>Business-led</span>
             </div>
             <div className="pill-divider" />
             <div className="pill-item">
               <Compass size={18} />
-              <span>Design AI Roadmaps</span>
+              <span>Built for deployment</span>
             </div>
             <div className="pill-divider" />
             <div className="pill-item">
               <TrendingUp size={18} />
-              <span>Deliver Measurable Impact</span>
+              <span>Designed for adoption</span>
             </div>
           </div>
         </div>
@@ -109,11 +113,32 @@ export default function HeroSection() {
           align-items: center;
         }
 
+        .hero-eyebrow {
+          display: block;
+          font-family: var(--font-secondary);
+          font-size: 0.8125rem;
+          font-weight: 700;
+          letter-spacing: 0.14em;
+          color: var(--color-navy-dark);
+          margin-bottom: 1rem;
+        }
+
         .hero-title {
           font-family: var(--font-primary);
-          font-size: clamp(3rem, 2.5rem + 3vw, 4.75rem);
+          font-size: clamp(2.25rem, 1.6rem + 3vw, 4.25rem);
           line-height: 1.1;
-          margin-bottom: 1.5rem;
+          margin-bottom: 1.25rem;
+          overflow-wrap: break-word;
+        }
+
+        .hero-tagline {
+          font-family: var(--font-secondary);
+          font-size: clamp(1.15rem, 1.05rem + 0.5vw, 1.45rem);
+          font-weight: 600;
+          color: var(--color-navy-dark);
+          line-height: 1.4;
+          max-width: 580px;
+          margin-bottom: 1rem;
         }
 
         .hero-subtitle {
@@ -182,7 +207,8 @@ export default function HeroSection() {
             text-align: center;
             gap: 2rem;
           }
-          .hero-subtitle {
+          .hero-subtitle,
+          .hero-tagline {
             margin-left: auto;
             margin-right: auto;
           }
@@ -211,6 +237,19 @@ export default function HeroSection() {
           }
           .pill-divider {
             display: none;
+          }
+        }
+
+        .hero-container > * {
+          min-width: 0;
+        }
+
+        @media (max-width: 360px) {
+          .hero-container {
+            padding: 0 1rem;
+          }
+          .hero-title {
+            font-size: 2rem;
           }
         }
       `}</style>

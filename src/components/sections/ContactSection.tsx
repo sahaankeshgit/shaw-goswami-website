@@ -32,10 +32,10 @@ export default function ContactSection() {
     <section id="contact" className="contact-section snap-section">
       <div className="container-custom">
         <div className="text-left-block" style={{ marginBottom: "3.5rem" }}>
-          <span className="section-tag">CONSULTATION</span>
-          <h2 className="section-title-serif">Let's Start a Conversation</h2>
+          <span className="section-tag">AI TRANSFORMATION</span>
+          <h2 className="section-title-serif">Let&apos;s Start Your AI Transformation</h2>
           <p className="section-subtitle-text">
-            Schedule a strategy call or submit a consultation request directly below.
+            Discuss your priorities, readiness and opportunities with S&amp;G AI.
           </p>
           <div className="title-underline-left" />
         </div>
@@ -45,7 +45,7 @@ export default function ContactSection() {
           <div className="contact-info-col">
             <h3 className="contact-col-title-homepage">Get in Touch</h3>
             <p className="contact-info-intro">
-              Schedule a call directly or submit your details to have an industry consulting partner contact you.
+              Schedule a conversation with our team, or send us your details and we&apos;ll get in touch.
             </p>
 
             {/* Calendly Integration Block */}
@@ -55,7 +55,7 @@ export default function ContactSection() {
                 Schedule Direct Call
               </h3>
               <p style={{ fontSize: "0.875rem", color: "var(--color-text-light)", marginBottom: "1.5rem" }}>
-                Skip the form and select a time directly on our consulting partner calendar.
+                Schedule a conversation with our team. Pick a time that suits you.
               </p>
               <a 
                 href="https://calendly.com/ankesh-shawandgoswami/30min"
@@ -71,7 +71,7 @@ export default function ContactSection() {
           {/* Right: Contact Form */}
           <div className="contact-form-col">
             <div className="form-card">
-              <h3 className="contact-col-title-homepage" style={{ marginBottom: "1.5rem" }}>Request a Strategy Audit</h3>
+              <h3 className="contact-col-title-homepage" style={{ marginBottom: "1.5rem" }}>Discuss Your Transformation</h3>
 
               {state.success ? (
                 <div className="form-success-alert" role="alert">
@@ -188,10 +188,10 @@ export default function ContactSection() {
                   >
                     {isPending ? (
                       <span style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}>
-                        <Loader2 size={16} className="animate-spin" /> Submitting Request...
+                        <Loader2 size={16} className="animate-spin" /> Sending Enquiry...
                       </span>
                     ) : (
-                      "Submit Consultation Request"
+                      "Send Enquiry"
                     )}
                   </button>
                 </form>

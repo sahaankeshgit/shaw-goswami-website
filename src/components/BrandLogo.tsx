@@ -38,13 +38,13 @@ export default function BrandLogo({
         }
       }}
       className={`brand-logo-container layout-${layout} ${className}`} 
-      aria-label="Shaw & Goswami Consulting Home"
+      aria-label="Shaw & Goswami AI Home"
     >
       {layout === "horizontal" ? (
         /* eslint-disable-next-line @next/next/no-img-element */
         <img 
           src={logoSrc} 
-          alt="Shaw & Goswami Consulting" 
+          alt="Shaw & Goswami AI" 
           className="logo-img-master-horizontal"
         />
       ) : (
